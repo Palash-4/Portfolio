@@ -13,7 +13,7 @@ const Footer = () => {
       <div className="relative py-6 flex items-center justify-center">
 
         <p className="text-white/50 text-sm md:text-base tracking-wide">
-          © 2025 - All Rights Reserved.
+          © 2026 - All Rights Reserved.
         </p>
 
       </div>
