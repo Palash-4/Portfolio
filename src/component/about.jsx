@@ -61,13 +61,15 @@ const About = () => {
           className="flex flex-wrap items-center justify-center gap-5 mt-4"
         >
 
-          <Link
-            href="/cv.pdf"
+          <a
+            href="/cv/cv.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center gap-3 px-8 md:px-10 py-4 rounded-2xl bg-gradient-to-r from-violet-500 to-fuchsia-500 text-white text-sm md:text-lg font-medium hover:scale-105 transition-all duration-300 shadow-[0_0_40px_rgba(168,85,247,0.25)]"
           >
             <FileDown size={20} />
             Download CV
-          </Link>
+          </a>
 
           <Link
             href="#portfolio"
