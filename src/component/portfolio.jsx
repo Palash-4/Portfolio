@@ -96,6 +96,34 @@ const projects = [
             "Checkout functionality",
         ],
     },
+    {
+        title: "English Janala",
+
+        image: "/projects/eng.png",
+
+        desc: "Interactive English learning platform designed to improve vocabulary, pronunciation, and communication skills.",
+
+        live: "https://english-janala-phi.vercel.app/",
+
+        github: "https://github.com/Palash-4",
+
+        tech: [
+            "HTML5",
+            "CSS3",
+            "JavaScript",
+            "Tailwind CSS",
+            "Responsive Design",
+        ],
+
+        features: [
+            "Interactive English learning interface",
+            "Vocabulary exploration system",
+            "Pronunciation support",
+            "Responsive modern design",
+            "Clean and user-friendly UI",
+            "Fast and smooth user experience",
+        ],
+    },
 ];
 
 // const certificates = [
@@ -143,8 +171,8 @@ const Portfolio = () => {
                     <button
                         onClick={() => setActiveTab("projects")}
                         className={`h-28 rounded-3xl transition-all duration-300 flex flex-col items-center justify-center gap-3 ${activeTab === "projects"
-                                ? "bg-gradient-to-r from-violet-500/30 to-cyan-500/20 border border-violet-500/20 text-white shadow-[0_0_50px_rgba(168,85,247,0.20)]"
-                                : "text-white/60 hover:bg-white/5"
+                            ? "bg-gradient-to-r from-violet-500/30 to-cyan-500/20 border border-violet-500/20 text-white shadow-[0_0_50px_rgba(168,85,247,0.20)]"
+                            : "text-white/60 hover:bg-white/5"
                             }`}
                     >
                         <Code2 size={28} />
@@ -156,8 +184,8 @@ const Portfolio = () => {
                     <button
                         onClick={() => setActiveTab("certificates")}
                         className={`h-28 rounded-3xl transition-all duration-300 flex flex-col items-center justify-center gap-3 ${activeTab === "certificates"
-                                ? "bg-gradient-to-r from-violet-500/30 to-cyan-500/20 border border-violet-500/20 text-white shadow-[0_0_50px_rgba(168,85,247,0.20)]"
-                                : "text-white/60 hover:bg-white/5"
+                            ? "bg-gradient-to-r from-violet-500/30 to-cyan-500/20 border border-violet-500/20 text-white shadow-[0_0_50px_rgba(168,85,247,0.20)]"
+                            : "text-white/60 hover:bg-white/5"
                             }`}
                     >
                         <Award size={28} />
@@ -171,8 +199,8 @@ const Portfolio = () => {
                     <button
                         onClick={() => setActiveTab("stack")}
                         className={`h-28 rounded-3xl transition-all duration-300 flex flex-col items-center justify-center gap-3 ${activeTab === "stack"
-                                ? "bg-gradient-to-r from-violet-500/30 to-cyan-500/20 border border-violet-500/20 text-white shadow-[0_0_50px_rgba(168,85,247,0.20)]"
-                                : "text-white/60 hover:bg-white/5"
+                            ? "bg-gradient-to-r from-violet-500/30 to-cyan-500/20 border border-violet-500/20 text-white shadow-[0_0_50px_rgba(168,85,247,0.20)]"
+                            : "text-white/60 hover:bg-white/5"
                             }`}
                     >
                         <Boxes size={28} />
