@@ -35,7 +35,7 @@ const About = () => {
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="mt-6 text-3xl md:text-2xl font-black bg-gradient-to-r from-violet-400 to-fuchsia-500 bg-clip-text text-transparent"
+            className="mt-6 text-4xl md:text-5xl font-black bg-gradient-to-r from-violet-400 to-fuchsia-500 bg-clip-text text-transparent"
           >
             About Me
           </motion.h2>
@@ -125,7 +125,7 @@ const About = () => {
 
           </Link>
 
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, y: 80 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
@@ -143,7 +143,7 @@ const About = () => {
               <div className="flex items-center justify-between mt-8">
 
                 <h3 className="text-3xl font-bold text-white">
-                  3+
+                  
                 </h3>
 
                 <ArrowUpRight className="text-white/40" />
@@ -160,44 +160,91 @@ const About = () => {
 
             </div>
 
-          </motion.div>
+          </motion.div> */}
 
-          <motion.div
-            initial={{ opacity: 0, y: 80 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
-            className="relative p-8 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl overflow-hidden hover:border-violet-500/30 hover:-translate-y-2 transition-all duration-300 group"
+          <Link
+            href="#portfolio"
+            className="block"
           >
+            <motion.div
+              initial={{ opacity: 0, y: 80 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              className="relative p-8 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl overflow-hidden hover:border-violet-500/30 hover:-translate-y-2 transition-all duration-300 group"
+            >
 
-            <div className="absolute inset-0 bg-gradient-to-br from-violet-500/10 to-cyan-500/5 opacity-0 group-hover:opacity-100 transition-all duration-300" />
+              <div className="absolute inset-0 bg-gradient-to-br from-violet-500/10 to-cyan-500/5 opacity-0 group-hover:opacity-100 transition-all duration-300" />
 
-            <div className="relative">
+              <div className="relative">
 
-              <div className="w-16 h-16 rounded-2xl bg-white/10 flex items-center justify-center text-white">
-                <Globe size={34} />
+                <div className="w-16 h-16 rounded-2xl bg-white/10 flex items-center justify-center text-white">
+                  <Award size={34} />
+                </div>
+
+                <div className="flex items-center justify-between mt-8">
+
+                  <h3 className="text-3xl font-bold text-white">
+                    Soon
+                  </h3>
+
+                  <ArrowUpRight className="text-white/40 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300" />
+
+                </div>
+
+                <h4 className="mt-5 text-xl font-semibold text-white/90 uppercase tracking-wide">
+                  Certificates
+                </h4>
+
+                <p className="mt-3 text-white/50 text-sm leading-relaxed">
+                  Professional certifications and achievements will be added here soon.
+                </p>
+
               </div>
 
-              <div className="flex items-center justify-between mt-8">
+            </motion.div>
+          </Link>
 
-                <h3 className="text-3xl font-bold text-white">
-                  2+
-                </h3>
+          <Link
+            href="#portfolio"
+            className="block"
+          >
+            <motion.div
+              initial={{ opacity: 0, y: 80 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 }}
+              className="relative p-8 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl overflow-hidden hover:border-violet-500/30 hover:-translate-y-2 transition-all duration-300 group"
+            >
 
-                <ArrowUpRight className="text-white/40" />
+              <div className="absolute inset-0 bg-gradient-to-br from-violet-500/10 to-cyan-500/5 opacity-0 group-hover:opacity-100 transition-all duration-300" />
+
+              <div className="relative">
+
+                <div className="w-16 h-16 rounded-2xl bg-white/10 flex items-center justify-center text-white">
+                  <Globe size={34} />
+                </div>
+
+                <div className="flex items-center justify-between mt-8">
+
+                  <h3 className="text-3xl font-bold text-white">
+
+                  </h3>
+
+                  <ArrowUpRight className="text-white/40" />
+
+                </div>
+
+                <h4 className="mt-5 text-xl font-semibold text-white/90 uppercase tracking-wide">
+                  Experience
+                </h4>
+
+                <p className="mt-3 text-white/50 text-sm leading-relaxed">
+                  Building responsive and interactive digital experiences.
+                </p>
 
               </div>
 
-              <h4 className="mt-5 text-xl font-semibold text-white/90 uppercase tracking-wide">
-                Experience
-              </h4>
-
-              <p className="mt-3 text-white/50 text-sm leading-relaxed">
-                Building responsive and interactive digital experiences.
-              </p>
-
-            </div>
-
-          </motion.div>
+            </motion.div>
+          </Link>
 
         </div>
 

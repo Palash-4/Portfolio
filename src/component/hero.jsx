@@ -8,14 +8,10 @@ import { TypeAnimation } from "react-type-animation";
 
 const Hero = () => {
   return (
-    <section className="min-h-screen flex items-center px-6 md:px-10 pt-28 overflow-hidden">
-
-      <div className="max-w-7xl mx-auto w-full grid lg:grid-cols-2 items-center gap-20">
-
-        {/* LEFT SIDE */}
+<section className="min-h-screen flex items-center px-5 sm:px-6 md:px-10 pt-32 lg:pt-28 overflow-hidden">
+<div className="max-w-7xl mx-auto w-full grid lg:grid-cols-2 items-center gap-14 lg:gap-20">
         <div>
 
-          {/* TOP BADGE */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-violet-500/20 bg-violet-500/10 shadow-[0_0_30px_rgba(168,85,247,0.12)] backdrop-blur-xl">
 
             <span className="text-cyan-400 text-sm">✦</span>
@@ -26,7 +22,6 @@ const Hero = () => {
 
           </div>
 
-          {/* HEADING */}
           <div className="mt-8">
 
             <h1 className="text-5xl sm:text-6xl lg:text-7xl leading-none font-black tracking-tight text-white">
@@ -39,7 +34,6 @@ const Hero = () => {
 
           </div>
 
-          {/* TYPE ANIMATION */}
           <div className="mt-6">
 
             <h3 className="text-xl sm:text-2xl md:text-4xl font-medium text-white/90">
@@ -66,13 +60,11 @@ const Hero = () => {
 
           </div>
 
-          {/* DESCRIPTION */}
           <p className="mt-6 text-base md:text-xl text-white/50 max-w-2xl leading-relaxed">
             Enhancing digital experiences that are smooth,
             scalable, and visually impressive for modern users.
           </p>
 
-          {/* TECH STACK */}
           <div className="flex flex-wrap items-center gap-3 mt-8">
 
             {["React", "Javascript", "Next.js", "MongoDB"].map((tech) => (
@@ -86,7 +78,6 @@ const Hero = () => {
 
           </div>
 
-          {/* BUTTONS */}
           <div className="flex flex-wrap items-center gap-4 mt-8">
 
             <Link
@@ -107,7 +98,6 @@ const Hero = () => {
 
           </div>
 
-          {/* SOCIAL ICONS */}
           <div className="flex items-center gap-5 mt-10">
 
             <Link
@@ -138,25 +128,18 @@ const Hero = () => {
 
         </div>
 
-        {/* RIGHT SIDE IMAGE */}
-        <div className="relative hidden lg:flex items-center justify-end">
-
-          {/* GLOW */}
+<div className="relative flex items-center justify-center lg:justify-end mt-14 lg:mt-0 order-last lg:order-none">
           <div className="absolute w-[420px] h-[420px] rounded-full bg-gradient-to-r from-violet-500/30 to-cyan-500/20 blur-3xl animate-pulse" />
 
-          {/* IMAGE CARD */}
-          <div className="relative w-[360px] h-[470px] rounded-[40px] border border-white/10 bg-white/5 backdrop-blur-2xl overflow-hidden shadow-[0_0_80px_rgba(168,85,247,0.25)]">
-
+          <div className="relative mx-auto w-[240px] sm:w-[300px] md:w-[340px] lg:w-[360px] h-[320px] sm:h-[400px] md:h-[450px] lg:h-[470px] rounded-[40px] border border-white/10 bg-white/5 backdrop-blur-2xl overflow-hidden shadow-[0_0_80px_rgba(168,85,247,0.25)]">
             <img
               src="/myphoto/palash.jpeg"
-              alt="Palash"
+              alt="palash"
               className="w-full h-full object-cover"
             />
 
-            {/* OVERLAY */}
             <div className="absolute inset-0 bg-gradient-to-t from-[#050816] via-transparent to-transparent" />
 
-            {/* BOTTOM INFO */}
             <div className="absolute bottom-6 left-6 right-6 flex items-center justify-between">
 
               <div>

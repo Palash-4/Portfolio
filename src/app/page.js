@@ -1,4 +1,5 @@
 import About from "@/component/about";
+import Contact from "@/component/contact";
 import Hero from "@/component/hero";
 import Portfolio from "@/component/portfolio";
 
@@ -15,7 +16,7 @@ export default function Home() {
       </section>
 
       <Portfolio />
-
+      <Contact></Contact>
     </main>
   );
 }
