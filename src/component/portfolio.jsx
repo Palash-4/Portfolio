@@ -10,6 +10,38 @@ import { useState } from "react";
 import ProjectDetails from "./projectDetails";
 
 const projects = [
+
+    {
+        title: "IdeaVault",
+
+        image: "/projects/ideavault.png",
+
+        desc: "A full-stack idea management platform that enables users to create, organize, track, and manage innovative ideas through a secure and responsive dashboard.",
+
+        live: "https://idea-vault-gilt.vercel.app/",
+
+        github: "https://github.com/Palash-4/IdeaVault",
+
+        server: "https://github.com/Palash-4/IdeaVault-Server",
+
+        tech: [
+            "React.js",
+            "Tailwind CSS",
+            "Firebase",
+            "MongoDB",
+            "Express.js",
+            "Node.js",
+        ],
+
+        features: [
+            "Secure authentication and protected user routes",
+            "Create, update, delete, and manage ideas with full CRUD functionality",
+            "Personalized dashboard for organizing and tracking ideas",
+            "Search and filter system for quick idea discovery",
+            "Responsive UI optimized for mobile, tablet, and desktop devices",
+            "MongoDB-powered data management with real-time user interactions",
+        ],
+    },
     {
         title: "SunCart ",
         image: "/projects/suncart.png",
@@ -126,12 +158,29 @@ const projects = [
     },
 ];
 
-// const certificates = [
-//   {
-//     title: "Problem Solving",
-//   },
-// ];
-
+const certificates = [
+    {
+        title: "Optimization Using Artificial Intelligence",
+        issuer: "GoEdu",
+        date: "June 2026",
+        image: "/certificates/Artificial.png",
+        pdf: "/certificates/Artificial in.pdf",
+    },
+    {
+        title: "ChatGPT Basics, Usage and Prospects",
+        issuer: "GoEdu",
+        date: "June 2026",
+        image: "/certificates/chat gpt.png",
+        pdf: "/certificates/Chatgptpdf.pdf",
+    },
+    {
+        title: "Effective Use of Google",
+        issuer: "GoEdu",
+        date: "June 2026",
+        image: "/certificates/Google use.png",
+        pdf: "/certificates/Google use.pdf",
+    },
+];
 const Portfolio = () => {
     const [activeTab, setActiveTab] = useState("projects");
     const [selectedProject, setSelectedProject] = useState(null);
@@ -274,57 +323,60 @@ const Portfolio = () => {
                 )}
 
                 {/* Certificates */}
-                {/* {
-                    activeTab === "certificates" && (
-
-                        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
-
-                            {certificates.map((certificate, index) => (
-
-                                <motion.div
-                                    key={index}
-                                    initial={{ opacity: 0, y: 70 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    transition={{
-                                        delay: index * 0.15,
-                                        duration: 0.7,
-                                    }}
-                                    viewport={{ once: true }}
-                                    className="h-[260px] rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl flex items-center justify-center text-white text-3xl font-semibold hover:border-violet-500/30 hover:-translate-y-2 transition-all duration-500"
-                                >
-
-                                    {certificate.title}
-
-                                </motion.div>
-
-                            ))}
-
-                        </div>
-                    )
-                } */}
-
-                {/* Certificates */}
                 {activeTab === "certificates" && (
-                    <motion.div
-                        initial={{ opacity: 0, y: 60 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.7 }}
-                        viewport={{ once: true }}
-                        className="h-[350px] rounded-[40px] border border-white/10 bg-gradient-to-b from-[#151a33] to-[#0c1022] backdrop-blur-xl flex flex-col items-center justify-center text-center px-6"
-                    >
-                        <div className="w-24 h-24 rounded-full bg-violet-500/10 border border-violet-500/20 flex items-center justify-center mb-8">
-                            <Award size={42} className="text-violet-400" />
-                        </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
+                        {certificates.map((certificate, index) => (
+                            <motion.div
+                                key={index}
+                                initial={{ opacity: 0, y: 80 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{
+                                    delay: index * 0.15,
+                                    duration: 0.7,
+                                }}
+                                viewport={{ once: true }}
+                                className="group relative rounded-[30px] border border-white/10 bg-gradient-to-b from-[#151a33] to-[#0c1022] backdrop-blur-xl overflow-hidden hover:-translate-y-4 hover:border-violet-500/30 hover:shadow-[0_0_60px_rgba(168,85,247,0.22)] transition-all duration-500"
+                            >
+                                {/* Certificate Image */}
+                                <div className="overflow-hidden rounded-t-3xl p-5">
+                                    <div className="overflow-hidden rounded-2xl">
+                                        <img
+                                            src={certificate.image}
+                                            alt={certificate.title}
+                                            className="w-full h-[250px] object-cover group-hover:scale-105 transition-all duration-700"
+                                        />
+                                    </div>
+                                </div>
 
-                        <h3 className="text-3xl md:text-4xl font-bold text-white">
-                            Certificates Coming Soon
-                        </h3>
+                                {/* Content */}
+                                <div className="px-6 pb-6">
+                                    <h3 className="text-2xl font-bold text-white leading-snug">
+                                        {certificate.title}
+                                    </h3>
 
-                        <p className="mt-5 text-white/50 max-w-2xl text-lg leading-relaxed">
-                            I am currently improving my skills and completing professional
-                            courses. Certificates and achievements will be added here soon.
-                        </p>
-                    </motion.div>
+                                    <p className="mt-3 text-white/60">
+                                        Issued by {certificate.issuer}
+                                    </p>
+
+                                    <p className="mt-2 text-violet-400 font-medium">
+                                        {certificate.date}
+                                    </p>
+
+                                    <div className="mt-8">
+                                        <a
+                                            href={certificate.pdf}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-all"
+                                        >
+                                            View Certificate
+                                            <ArrowUpRight size={18} />
+                                        </a>
+                                    </div>
+                                </div>
+                            </motion.div>
+                        ))}
+                    </div>
                 )}
 
                 {/* Tech Stack */}
